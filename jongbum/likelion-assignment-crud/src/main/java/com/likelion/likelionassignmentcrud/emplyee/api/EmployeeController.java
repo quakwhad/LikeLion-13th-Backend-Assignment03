@@ -1,11 +1,8 @@
 package com.likelion.likelionassignmentcrud.emplyee.api;
 
-import com.likelion.likelionassignmentcrud.department.api.dto.response.DepartmentListResponseDto;
-import com.likelion.likelionassignmentcrud.department.domain.Department;
 import com.likelion.likelionassignmentcrud.emplyee.api.dto.request.EmployeeSaveRequestDto;
-import com.likelion.likelionassignmentcrud.emplyee.api.dto.response.EmployeeInfoResponseDto;
 import com.likelion.likelionassignmentcrud.emplyee.api.dto.response.EmployeeListResponseDto;
-import com.likelion.likelionassignmentcrud.emplyee.application.EmployeeService;
+import com.likelion.likelionassignmentcrud.emplyee.api.application.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

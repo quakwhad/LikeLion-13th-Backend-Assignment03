@@ -22,6 +22,8 @@ public class Department {
     @Column(name = "department_id")
     private Long departmentId;
 
+    private String name;
+
     @Enumerated(EnumType.STRING)
     @Column(length = 20)
     private Part part;
@@ -30,7 +32,8 @@ public class Department {
     private List<Employee> employees = new ArrayList<>();
 
     @Builder
-    private Department(Part part) {
+    private Department(String name, Part part) {
+        this.name = name;
         this.part = part;
     }
 }

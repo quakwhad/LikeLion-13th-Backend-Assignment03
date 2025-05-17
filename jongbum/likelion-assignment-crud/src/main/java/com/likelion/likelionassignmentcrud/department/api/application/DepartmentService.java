@@ -1,4 +1,4 @@
-package com.likelion.likelionassignmentcrud.department.application;
+package com.likelion.likelionassignmentcrud.department.api.application;
 
 import com.likelion.likelionassignmentcrud.department.api.dto.request.DepartmentSaveRequestDto;
 import com.likelion.likelionassignmentcrud.department.api.dto.response.DepartmentInfoResponseDto;
@@ -21,6 +21,7 @@ public class DepartmentService {
     @Transactional
     public void departmentSave(DepartmentSaveRequestDto departmentSaveRequestDto) {
         Department department = Department.builder()
+                .name(departmentSaveRequestDto.name())
                 .part(departmentSaveRequestDto.part())
                 .build();
         departmentRepository.save(department);

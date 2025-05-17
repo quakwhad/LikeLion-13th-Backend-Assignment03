@@ -3,7 +3,7 @@ package com.likelion.likelionassignmentcrud.department.api;
 import com.likelion.likelionassignmentcrud.department.api.dto.request.DepartmentSaveRequestDto;
 import com.likelion.likelionassignmentcrud.department.api.dto.response.DepartmentInfoResponseDto;
 import com.likelion.likelionassignmentcrud.department.api.dto.response.DepartmentListResponseDto;
-import com.likelion.likelionassignmentcrud.department.application.DepartmentService;
+import com.likelion.likelionassignmentcrud.department.api.application.DepartmentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

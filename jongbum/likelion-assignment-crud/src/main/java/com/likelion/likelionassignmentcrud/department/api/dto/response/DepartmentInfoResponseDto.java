@@ -6,10 +6,12 @@ import lombok.Builder;
 
 @Builder
 public record DepartmentInfoResponseDto(
+        String name,
         Part part
 ) {
     public static DepartmentInfoResponseDto from(Department department) {
         return DepartmentInfoResponseDto.builder()
+                .name(department.getName())
                 .part(department.getPart())
                 .build();
     }

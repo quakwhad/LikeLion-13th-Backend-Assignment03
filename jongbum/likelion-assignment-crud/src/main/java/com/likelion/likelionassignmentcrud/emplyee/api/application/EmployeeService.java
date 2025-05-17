@@ -1,4 +1,4 @@
-package com.likelion.likelionassignmentcrud.emplyee.application;
+package com.likelion.likelionassignmentcrud.emplyee.api.application;
 
 import com.likelion.likelionassignmentcrud.department.api.dto.request.DepartmentSaveRequestDto;
 import com.likelion.likelionassignmentcrud.department.domain.Department;
@@ -32,6 +32,8 @@ public class EmployeeService {
                 .responsibilities(employeeSaveRequestDto.responsibilities())
                 .department(department)
                 .build();
+
+        employeeRepository.save(employee);
     }
 
     // 특정 부서의 직원 목록 조회

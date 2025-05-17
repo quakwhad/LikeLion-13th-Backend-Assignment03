@@ -1,5 +1,6 @@
 package com.likelion.likelionassignmentcrud.emplyee.api.dto.response;
 
+import com.likelion.likelionassignmentcrud.department.domain.Part;
 import com.likelion.likelionassignmentcrud.emplyee.domain.Employee;
 import lombok.Builder;
 
@@ -7,13 +8,15 @@ import lombok.Builder;
 public record EmployeeInfoResponseDto(
         String name,
         int age,
-        String responsibilities
+        String responsibilities,
+        Part part
 ) {
     public static EmployeeInfoResponseDto from(Employee employee) {
         return EmployeeInfoResponseDto.builder()
                 .name(employee.getName())
                 .age(employee.getAge())
                 .responsibilities(employee.getResponsibilities())
+                .part(employee.getDepartment().getPart())
                 .build();
     }
 }
